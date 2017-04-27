@@ -10,8 +10,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+
+        NSDictionary *orderDict = @{
+                                    @"burgers": @5,
+                                    @"shakes": @3,
+                                    @"customers": @4,
+                                    @"isTakeOut": @NO,
+                                    @"subtotal": @0.0
+                                    };
+        
     }
     return 0;
 }
