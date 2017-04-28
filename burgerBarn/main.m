@@ -19,6 +19,16 @@ int main(int argc, const char * argv[]) {
                                     @"subtotal": @0.0
                                     };
         
+        float burgerPrice = 4;
+        float shakePrice = 3;
+        float subtotal;
+        
+        subtotal = (burgerPrice * [[orderDict valueForKey:@"burgers"]intValue]) + (shakePrice * [[orderDict valueForKey:@"shakes"]intValue]);
+        
+        NSMutableDictionary *outputDict = [NSMutableDictionary dictionaryWithDictionary:orderDict];
+        
+        [outputDict setValue:@(subtotal) forKey:@"subtotal"];
+        
     }
     return 0;
 }
