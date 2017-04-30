@@ -29,6 +29,19 @@ int main(int argc, const char * argv[]) {
         
         [outputDict setValue:@(subtotal) forKey:@"subtotal"];
         
+        // Array example only
+        
+        float subtotal2 = 0;
+        int customerAge;
+        
+        NSArray *agesArray = @[@5, @5, @14, @42, @77];
+        
+        for (NSNumber *age in agesArray) {
+            // Some logic here.
+            customerAge = [age intValue];
+            subtotal2 = subtotal2 + 1;
+        }
+        
     }
     return 0;
 }
