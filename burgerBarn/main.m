@@ -42,6 +42,26 @@ int main(int argc, const char * argv[]) {
             subtotal2 = subtotal2 + 1;
         }
         
+        // history class examples
+        
+        NSArray *quizArray = @[@100, @94, @83, @77, @72];
+        
+        float scoreTotal = 0;
+        
+        for (NSNumber *quizScore in quizArray) {
+            scoreTotal = scoreTotal + [quizScore intValue];
+        }
+        
+        float average = scoreTotal / [quizArray count];
+        
+        NSMutableArray *seatingArray = [NSMutableArray arrayWithObjects:@"Page", @"Chris", @"Ernest", @"Mike", @"Jon", nil];
+        
+        [seatingArray removeObjectAtIndex:3];
+        
+        [seatingArray removeObjectIdenticalTo:@"Mike"];
+        
+        [seatingArray insertObject:@"Phil" atIndex:1];
+        
     }
     return 0;
 }
